@@ -114,12 +114,21 @@ nav ul li:hover ul {
 }
 
 /* logo / image size */
-nav > ul > li:first-child a{
+nav > ul > li:first-child {
     display:flex;
+    /* this will make the first li a flex container, which will allow the image to be centered vertically */
+    flex-direction: column;
+    /* this will center the image vertically */
+}
+nav > ul > li:first-child a{
+    position: relative;
+    flex-grow: 1;
+    padding-top: 0;
 }
 
 nav img {
-    height: 25px;
+    position: absolute;
+    height: 100%;
 }
 
 /* *******************************************************
@@ -138,7 +147,7 @@ flex-direction: coloumn;
 justify-content: space-between;
      */
 
-     
+
 /*  this media query means the styke inside will only apply when the screen is over 760px wide */
 @media screen and (min-width: 760px) {
     main section {
